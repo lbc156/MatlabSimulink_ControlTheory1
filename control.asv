@@ -1,0 +1,21 @@
+%control unit
+function u = control(v)
+global ml mc g l alpha beta c1 c2 k1 k2
+
+    %dinh nghia cac dau vao theo vecto dau vao k 
+    x1 = v(1)
+    x2 = v(2)
+    x3 = v(3)
+    x4 = v(4)
+    xd = v(5)
+    alpha = v(6)
+    beta = v(7)
+    
+    
+    f1 = (ml*l*v4*sin(v3)+ml*g*sin(v3)*cos(v3))/(mc+ml*sin(v3)^2)       % nhap cac ham f1,f2,g1,g2
+    f2 = -(ml*l*(v3^2)*sin(v3)*cos(v3)+(mc+ml)*g*sin(v3))/(l*(mc+ml*(sin(x3)^2)))
+    g1 = 1/(mc+ml*(sin(x3)^2 ) ) 
+    g2 = -cos(x3)/(l*(mc+ml*(sin(x3)^2)))
+    
+    f1 = 
+    
